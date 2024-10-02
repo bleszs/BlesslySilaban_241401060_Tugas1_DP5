@@ -9,9 +9,15 @@ begin
     write('Masukkan bilangan anda: '); readln(N);
 
     if (N > 0) then
-        writeln(N, ' adalah bilangan positif')
+        begin
+        writeln(N:0:0, ' adalah bilangan positif')
+        end
     else if (N < 0) then
-        writeln(N, ' adalah bilangan negatif')
+        begin
+        writeln(N:0:0, ' adalah bilangan negatif')
+        end
     else
-        writeln(N, ' adalah nol');
+        begin
+        writeln(N:0:0, ' adalah nol');
+        end;
 end.
