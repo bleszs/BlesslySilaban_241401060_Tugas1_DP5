@@ -8,7 +8,7 @@ const
   pizza = 30000;
 
 var
-  no: integer;
+  i: integer;
   uang, harga, total_harga, kembalian: longint;
   selesai: char;
 
@@ -24,42 +24,41 @@ begin
     writeln('3. Kentucky (Rp.', kentucky, ')');
     writeln('4. Pizza (Rp.', pizza, ')');
     writeln('-----------------------------------------');
-    writeln('Masukkan nomor menu yang ingin Anda beli:');
-    readln(no);
+    write('Masukkan nomor menu yang ingin Anda beli: ');
+    readln(i);
 
-    case no of 
+    case i of 
       1: 
         begin
-          writeln('Anda memilih Kebab dengan harga Rp.', kebab);
+          write('Anda memilih Kebab dengan harga Rp.', kebab);
           total_harga := total_harga + kebab;
         end;
       2: 
         begin
-          writeln('Anda memilih Burger dengan harga Rp.', burger);
+          write('Anda memilih Burger dengan harga Rp.', burger);
           total_harga := total_harga + burger;
         end;
       3: 
         begin
-          writeln('Anda memilih Kentucky dengan harga Rp.', kentucky);
+          write('Anda memilih Kentucky dengan harga Rp.', kentucky);
           total_harga := total_harga + kentucky;
         end;
       4: 
         begin
-          writeln('Anda memilih Pizza dengan harga Rp.', pizza);
+          write('Anda memilih Pizza dengan harga Rp.', pizza);
           total_harga := total_harga + pizza;
         end;
     else
-      writeln('Harap masukan nomor yang sesuai.');
+      write('Harap masukan nomor yang sesuai.');
     end;
 
-    writeln('Apakah Anda ingin membeli menu lain? (Y/N)');
+    write('Apakah Anda ingin membeli menu lain? (Y/N): ');
     readln(selesai);
 
   until (selesai = 'N') or (selesai = 'n');
 
   writeln('Total harga belanja Anda: Rp.', total_harga);
-  writeln('Masukkan jumlah uang yang Anda miliki:');
-  readln(uang);
+  write('Masukkan jumlah uang yang Anda miliki: '); readln(uang);
 
   if uang >= total_harga then
   begin
